@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  padding: 0;
+  text-decoration: none;
+  scroll-behavior: smooth;
+   font-family: 'Segoe UI', sans-serif;
+   text-align: center;
+   font-size: 25px;
+}
+#root{
+  background: linear-gradient(135deg, #FFB74D, #FF6F61);
+
+}
+.city-input-section{
+  display: grid;
+  align-items: center;
+  padding-top: 5%;
+   
+}
+h2,h1{
+  font-size: 40px;
+  color: #FAFAFA;
+
+}
+input, button{
+  border-radius: 8px;
+margin:0.5%;
+    border: none;
+        padding: 0.5%;
+}
+button{
+color: #333333;
+
+}

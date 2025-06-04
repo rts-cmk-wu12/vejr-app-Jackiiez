@@ -1,0 +1,107 @@
+.navbar {
+    background: linear-gradient(135deg, #FFB74D, #FF6F61);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+
+        h1, h2 {
+            margin: 0;
+            opacity: 0;
+            animation: fadeIn 0.5s ease forwards;
+        }
+
+        h1 {
+            font-size: 2rem;
+            animation-delay: 0.3s;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            text-align: center;
+            flex-grow: 1;
+            animation-delay: 0.4s;
+        }
+    }
+
+    .nav-list {
+        list-style: none;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 2% 0 0;
+        padding: 0;
+
+        .nav-item {
+            margin: 0 1rem;
+            position: relative;
+            overflow: hidden;
+
+            p {
+                color: #001F3F;
+                text-decoration: none;
+                font-size: 1.2rem;
+                padding: 0.5rem 1rem;
+                transition: color 0.3s ease, transform 0.3s ease;
+
+                &:hover {
+                    color: #FFFFFF;
+                    transform: translateY(-3px);
+
+                    &::before {
+                        opacity: 1;
+                    }
+                }
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -1;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+            }
+        }
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-item {
+        animation: fadeIn 0.5s ease forwards;
+        opacity: 0;
+
+        &:nth-child(1) { animation-delay: 0.1s; }
+        &:nth-child(2) { animation-delay: 0.2s; }
+        &:nth-child(3) { animation-delay: 0.3s; }
+        &:nth-child(4) { animation-delay: 0.4s; }
+        &:nth-child(5) { animation-delay: 0.5s; }
+        &:nth-child(6) { animation-delay: 0.6s; }
+    }
+
+    @media (max-width: 768px) {
+        .nav-list {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+

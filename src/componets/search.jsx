@@ -14,8 +14,9 @@ function CityInput() {
 
     return (
         <div className="city-input-section">
-            <h2>Søg på en by!</h2>
+        
             <form onSubmit={handleSubmit}>
+                    <h2>Dagens vejr!</h2>
                 <input
                     type="text"
                     value={by}

@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import NavBar from './navbar';
+import '../height.scss';
 
 function Details() {
     const { by } = useParams();
@@ -36,6 +38,8 @@ function Details() {
     }, [by]);
     console.log(vejr)
     return (
+        <>
+            <NavBar/>
         <div className="weather-section">
             <h2>Vejr {by}</h2>
             {fejl && <p>Error: {fejl}</p>}
@@ -60,7 +64,7 @@ function Details() {
             ) : (
                 <p>Indlæser Vejr data...</p>
             )}
-        </div>
+        </div></>
     );
 }
 
