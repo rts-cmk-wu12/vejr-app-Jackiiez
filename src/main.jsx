@@ -3,6 +3,9 @@ import { createRoot } from 'react-dom/client'
 import { GloabelContext } from "./gloabelContext";
 import { createBrowserRouter, RouterProvider } from 'react-router'
 import App from './App.jsx'
+import Search from "./componets/search.jsx";
+import Weather from "./componets/wether.jsx";
+import Details from "./componets/wether-details.jsx";
 
 
 
@@ -13,7 +16,15 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <App />
-  }
+  },
+   {
+    path:"/vejr/:by",
+    element: <Details />
+  },
+  //  {
+  //   path: "/",
+  //   element: <Search />
+  // },
 ])
 //vi laver et state som vi ka gemme i vores context
 const MyProvider = ({ children }) => {
